@@ -1,5 +1,7 @@
 package Pages;
 
+import static org.testng.Assert.assertEquals;
+
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
@@ -27,6 +29,9 @@ public class ViewProfilePage extends TestBase {
 
 	@FindBy(id = "saveBasicDetailsBtn")
 	WebElement saveButton;
+	
+	@FindBy(xpath = "//p[@class='msg']")
+	WebElement CVUpdateSuccessMsg;
 
 	@FindBy(xpath = "//input[contains(@class,'dummyUpload')]")
 	WebElement inputFile;
@@ -69,8 +74,17 @@ public class ViewProfilePage extends TestBase {
 
 			rb.keyPress(KeyEvent.VK_ENTER);
 			rb.keyRelease(KeyEvent.VK_ENTER);
+			
+			
+			wait.until(ExpectedConditions.visibilityOf(CVUpdateSuccessMsg));
+			
+			String ResumeUploadedSuccessMsg = CVUpdateSuccessMsg.getText();
+			
+			assertEquals(ResumeUploadedSuccessMsg,"Resume has been successfully uploaded.");
 
 			System.out.println("File Uploaded");
+			
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
