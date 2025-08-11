@@ -1,18 +1,14 @@
 package Pages;
-
 import static org.testng.Assert.assertEquals;
-
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import TestBase.TestBase;
 
 public class ViewProfilePage extends TestBase {
