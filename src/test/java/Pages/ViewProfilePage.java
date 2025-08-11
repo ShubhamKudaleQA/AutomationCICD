@@ -78,7 +78,6 @@ public class ViewProfilePage extends TestBase {
 			assertEquals(ResumeUploadedSuccessMsg,"Resume has been successfully uploaded.");
 
 			System.out.println("File Uploaded");
-			System.out.println("Commit done!!!");
 		
 
 		} catch (Exception e) {
