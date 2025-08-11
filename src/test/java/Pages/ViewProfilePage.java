@@ -74,8 +74,7 @@ public class ViewProfilePage extends TestBase {
 
 			rb.keyPress(KeyEvent.VK_ENTER);
 			rb.keyRelease(KeyEvent.VK_ENTER);
-			
-			
+		
 			wait.until(ExpectedConditions.visibilityOf(CVUpdateSuccessMsg));
 			
 			String ResumeUploadedSuccessMsg = CVUpdateSuccessMsg.getText();
